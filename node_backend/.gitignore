@@ -1,0 +1,9 @@
+"node_modules/" 
+'source/'
+__pycache__/
+myenv/
+env/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
