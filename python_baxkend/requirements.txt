@@ -1,5 +1,4 @@
-Flask
-pywin32
+flask
 gunicorn
 requests
 py-wallpaper
