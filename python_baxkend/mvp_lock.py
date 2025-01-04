@@ -1,10 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import requests
 import os
-import win32api
-import win32con
-import win32gui
-
+import wallpaper
 # import modules
 #from py-wallpaper import set_wallpaper, get_wallpaper,change_wallpaper
   # Importing py-wallpaper
@@ -49,7 +46,8 @@ def set_wallpaper():
         with open(local_image_path, "wb") as f:
             f.write(response.content)
         # Set the wallpaper
-        win32gui.SystemParametersInfo(win32con.SPI_SETDESKWALLPAPER, local_image_path, win32con.SPIF_SENDCHANGE)
+        # win32gui.SystemParametersInfo(win32con.SPI_SETDESKWALLPAPER, local_image_path, win32con.SPIF_SENDCHANGE)
+        wallpaper.set_wallpaper(local_image_path)
 
 
         return jsonify({"success": True, "message": "Wallpaper set successfully"})

@@ -2,3 +2,4 @@ Flask
 pywin32
 gunicorn
 requests
+py-wallpaper
